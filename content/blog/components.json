@@ -1,0 +1,27 @@
+{
+    "title": "Dynamic components example",
+    "body": [
+        "The <a href=\"https://plenti.co/docs/allComponents\">allComponents</a> helper object holds references to all svelte templates on your site.",
+        "This allows you to load components from your JSON data source without explicitly importing them.",
+        "Just remember to use a <em>component signature</em> (e.g. layout/components/template.svelte becomes layout_components_template_svelte)."
+    ],
+	"components": [
+		{
+            "title": "For example we could grab the 'incrementer':",
+			"component": "incrementer",
+			"fields": {}
+		},
+		{
+            "title": "The 'decrementer':",
+			"component": "decrementer",
+			"fields": {}
+		},
+		{
+            "title": "Or even the 'grid':",
+			"component": "grid",
+			"fields": {"items": [1, 2, 3]}
+		}
+	],
+    "author": "Jim Fisk",
+    "date": "12/9/2020"
+}
