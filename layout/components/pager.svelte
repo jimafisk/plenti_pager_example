@@ -1,7 +1,7 @@
 <script>
   export let currentPage, totalPages;
 </script>
-{currentPage}
+
 <ul>
   {#if currentPage > 1}
     <li><a href="/">first</a></li>
@@ -20,6 +20,22 @@
   {/each}
   {#if currentPage < totalPages}
     <li><a href="/{currentPage + 1}">next</a></li>
-    <li><a href="/{totalPages}">last</li>
+    <li><a href="/{totalPages}">last</a></li>
   {/if}
 </ul>
+
+<style>
+  ul {
+    display: flex;
+  }
+  li {
+    flex-grow: 1;
+    list-style: none;
+  }
+  a {
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: #f0efef;
+  }
+</style>
