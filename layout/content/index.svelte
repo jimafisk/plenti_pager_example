@@ -4,16 +4,13 @@
   import Uses from "../components/template.svelte";
   import Pager from "../components/pager.svelte";
 
-  let currentPage = content.pager; // get the new "pager" key from the content source.
+  $: currentPage = content.pager; // get the new "pager" key from the content source.
   let postsPerPage = 3;
   let allPosts = allContent.filter(content => content.type == "blog");
   let totalPosts = allPosts.length;
   let totalPages = Math.ceil(totalPosts / postsPerPage);
   $: postRangeHigh = currentPage * postsPerPage;
   $: postRangeLow = postRangeHigh - postsPerPage;
-  const setCurrentPage = newPage => {
-    currentPage = newPage;
-  }
 </script>
 
 <h1>Pager Example</h1>
@@ -30,7 +27,7 @@
   {/if}
 {/each}
 
-<Pager {currentPage} {setCurrentPage} {totalPages} />
+<Pager {currentPage} {totalPages} />
 
 <div>
   <h3>Recent blog posts:</h3>
