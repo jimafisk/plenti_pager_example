@@ -4,7 +4,7 @@
 {currentPage}
 <ul>
   {#if currentPage > 1}
-    <li><a href="/" on:click={() => setCurrentPage(1)}>first</a></li>
+    <li><a href="/">first</a></li>
     <li><a href="/{currentPage - 1}">previous</a></li>
   {/if}
   {#each [3,2,1] as i}

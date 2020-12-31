@@ -21,13 +21,19 @@
 	{/each}
 </section>
 
-{#each allPosts as post, i}
+{#each allPosts.sort((a,b) => a.filename.localeCompare(b.filename)) as post, i}
   {#if i >= postRangeLow && i < postRangeHigh}
     <h3>{post.filename}</h3>
   {/if}
 {/each}
 
 <Pager {currentPage} {totalPages} />
+
+{#each allPosts as post, i}
+  {#if true}
+    {post.filename}<br />
+  {/if}
+{/each}
 
 <div>
   <h3>Recent blog posts:</h3>
