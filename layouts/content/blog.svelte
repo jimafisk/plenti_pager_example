@@ -12,7 +12,7 @@
   });
 
   // Content driven dynamic components example:
-  export let components, allComponents;
+  export let components, allLayouts;
 </script>
 
 <h1>{title}</h1>
@@ -34,7 +34,7 @@
 {#if components}
 	{#each components as { title, component, fields }}
     <p>{title}</p>
-		<svelte:component this="{allComponents["layout_components_" + component + "_svelte"]}" {...fields} />
+		<svelte:component this="{allLayouts["layouts_components_" + component + "_svelte"]}" {...fields} />
 	{/each}
 {/if}
 

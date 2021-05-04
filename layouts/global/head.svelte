@@ -7,6 +7,7 @@
   <meta name='viewport' content='width=device-width,initial-scale=1'>
 
   <title>{ title }</title>
+  <base href="/">
 
   <script type="module" src="/spa/ejected/main.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
