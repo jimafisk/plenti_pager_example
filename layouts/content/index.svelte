@@ -4,7 +4,7 @@
   import Uses from "../components/template.svelte";
   import Pager from "../components/pager.svelte";
 
-  $: currentPage = content.pager; // get the new "pager" key from the content source.
+  $: currentPage = content.pager ? content.pager : 1; // get the new "pager" key from the content source.
   let postsPerPage = 3;
   let allPosts = allContent.filter(content => content.type == "blog");
   let totalPosts = allPosts.length;
